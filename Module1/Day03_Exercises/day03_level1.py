@@ -36,11 +36,11 @@ print("=" * 50)
 
 # key-value pairs 
 student = {
-    "name": "Lidia Tesfaye",
-    "age": 21,
-    "grade": "A",
+    "name": "Lidia Asamnew",
+    "age": 22,
+    "grade": "3.5",
     "city": "Addis Ababa",
-    "department": "Computer Science"
+    "department": "Software Engineering"
 }
 
 # Access values using their key inside square brackets
@@ -49,7 +49,7 @@ print(f"Department: {student['department']}")
 print(f"Grade: {student['grade']}")
 
 # Adding a new key-value pair is as simple as assigning to a new key.
-student["phone"] = "0987654321"
+student["phone"] = "0900024893"
 
 # Updating an existing key just overwrites its value.
 student["grade"] = "A+"
