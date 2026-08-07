@@ -1,9 +1,5 @@
 # 5. Grade Classifier
 
-print("=" * 50)
-print("GRADE CLASSIFIER")
-print("=" * 50)
-
 score = float(input("Enter your score (0-100): "))
 
 # Use if/elif/else to classify the score into a grade
@@ -23,10 +19,6 @@ print()
 
 
 # 6. Number Pattern
-
-print("=" * 50)
-print("NUMBER PATTERNS (1 to 20)")
-print("=" * 50)
 
 # Print all numbers from 1 to 20
 print("All numbers from 1 to 20:")
@@ -51,9 +43,6 @@ print("\n")
 
 # 7. While Loop Practice
 
-print("=" * 50)
-print("SUM OF POSITIVE NUMBERS (enter 0 to stop)")
-print("=" * 50)
 
 total_sum = 0  # keeps track of the running total
 
@@ -63,20 +52,18 @@ while True:
         break  # exit the loop when user enters 0
     total_sum += user_number  # add the number to the running total
 
-print(f"\n✅ Total sum of all entered numbers: {total_sum}")
+print(f"\n Total sum of all entered numbers: {total_sum}")
 print()
 
 
 # 8. Function Practice
 
-print("=" * 50)
-print("FUNCTION PRACTICE")
-print("=" * 50)
+
 
 
 def greet(name):
     """Prints a welcome message for the given name."""
-    print(f"👋 Welcome, {name}! Great to have you here.")
+    print(f" Welcome, {name}! Great to have you here.")
 
 
 def square(number):

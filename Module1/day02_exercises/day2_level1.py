@@ -1,8 +1,3 @@
-"""
-Day 2 - Level 1: Basic Python Exercises
-Covers: Variables & Data Types, Arithmetic Operations,
-        Type Conversion, Simple Decision (if/else)
-"""
 
 
 # 1. Variables & Data Types
@@ -17,17 +12,13 @@ favorite_food = "Shiro Wet"       # string
 print("=" * 50)
 print("PERSONAL PROFILE")
 print("=" * 50)
-print(f"👋 Hello! My name is {full_name}, I am {age} years old, "
+print(f"Hello! My name is {full_name}, I am {age} years old, "
       f"and I stand {height}m tall.")
-print(f"📚 Student status: {'Yes, I am a student' if is_student else 'No, I am not a student'}.")
-print(f"🍽️  My favorite food is {favorite_food}.")
+print(f"Student status: {'Yes, I am a student' if is_student else 'No, I am not a student'}.")
+print(f"My favorite food is {favorite_food}.")
 print()
 
 # 2. Arithmetic Operations
-
-print("=" * 50)
-print("ARITHMETIC OPERATIONS")
-print("=" * 50)
 
 # Get two numbers from the user and cast them to float
 num1 = float(input("Enter the first number: "))
@@ -43,20 +34,16 @@ remainder = num1 % num2 if num2 != 0 else "Undefined (division by zero)"
 
 # Display results neatly
 print(f"\nResults for {num1} and {num2}:")
-print(f"  ➕ Sum              : {addition}")
-print(f"  ➖ Difference       : {subtraction}")
-print(f"  ✖️  Product          : {multiplication}")
-print(f"  ➗ Division         : {division}")
-print(f"  🔽 Floor Division   : {floor_division}")
-print(f"  🔄 Remainder        : {remainder}")
+print(f"   Sum              : {addition}")
+print(f"  Difference       : {subtraction}")
+print(f"  Product          : {multiplication}")
+print(f"  Division         : {division}")
+print(f"  Floor Division   : {floor_division}")
+print(f"  Remainder        : {remainder}")
 print()
 
 
 # 3. Type Conversion
-
-print("=" * 50)
-print("AGE CALCULATOR")
-print("=" * 50)
 
 current_year = 2026  
 
@@ -69,9 +56,6 @@ print()
 
 # 4. Simple Decision (if/else)
 
-print("=" * 50)
-print("PASS OR FAIL CHECK")
-print("=" * 50)
 
 score = float(input("Enter your score (0-100): "))
 

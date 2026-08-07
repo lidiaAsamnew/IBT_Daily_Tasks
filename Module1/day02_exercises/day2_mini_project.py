@@ -14,13 +14,13 @@ def add_income():
     try:
         amount = float(input("Enter income amount: "))
         if amount < 0:
-            print("⚠️  Income cannot be negative. Please try again.")
+            print(" Income cannot be negative. Please try again.")
             return
         balance += amount
         total_income += amount
-        print(f"✅ Income of {amount:.2f} added successfully!")
+        print(f"Income of {amount:.2f} added successfully!")
     except ValueError:
-        print("⚠️  Invalid input! Please enter a valid number.")
+        print(" Invalid input! Please enter a valid number.")
 
 
 # Function to add expense
@@ -31,15 +31,15 @@ def add_expense():
     try:
         amount = float(input("Enter expense amount: "))
         if amount < 0:
-            print("⚠️  Expense cannot be negative. Please try again.")
+            print(" Expense cannot be negative. Please try again.")
             return
         if amount > balance:
-            print("⚠️  Warning: This expense exceeds your current balance!")
+            print(" Warning: This expense exceeds your current balance!")
         balance -= amount
         total_expense += amount
-        print(f"✅ Expense of {amount:.2f} recorded successfully!")
+        print(f" Expense of {amount:.2f} recorded successfully!")
     except ValueError:
-        print("⚠️  Invalid input! Please enter a valid number.")
+        print("  Invalid input! Please enter a valid number.")
 
 
 
@@ -62,7 +62,7 @@ def show_summary():
     print(f"Total Expense  : {total_expense:.2f}")
     print(f"Final Balance  : {balance:.2f}")
     print("=" * 50)
-    print("Thank you for using the Personal Finance Tracker! 👋")
+    print("Thank you for using the Personal Finance Tracker!")
 
 
 
@@ -82,7 +82,7 @@ def run_finance_tracker():
         try:
             choice = int(input("Choose an option (1-4): "))
         except ValueError:
-            print("⚠️  Invalid input! Please enter a number between 1 and 4.")
+            print(" Invalid input! Please enter a number between 1 and 4.")
             continue  # go back to the top of the loop
 
         if choice == 1:
@@ -95,8 +95,7 @@ def run_finance_tracker():
             show_summary()  # bonus summary before exiting
             break  # exit the while loop and end the program
         else:
-            print("⚠️  Invalid option! Please choose a number between 1 and 4.")
+            print(" Invalid option! Please choose a number between 1 and 4.")
 
 
-# Run the program
 run_finance_tracker()

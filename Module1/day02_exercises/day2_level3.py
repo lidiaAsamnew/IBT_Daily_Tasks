@@ -1,11 +1,6 @@
 
 # 9. Tip Calculator (Full Program)
 
-print("=" * 50)
-print("TIP CALCULATOR")
-print("=" * 50)
-
-
 def calculate_tip(bill_amount, tip_percentage):
     """Calculates and returns the tip amount based on the bill and tip %."""
     return bill_amount * (tip_percentage / 100)
@@ -25,7 +20,7 @@ def run_tip_calculator():
         tip_percentage = int(input("Enter tip percentage (10, 15, or 20): "))
         if tip_percentage in (10, 15, 20):
             break
-        print("⚠️  Please enter a valid option: 10, 15, or 20.")
+        print(" Please enter a valid option: 10, 15, or 20.")
 
     number_of_people = int(input("Enter number of people splitting the bill: "))
 
@@ -48,10 +43,6 @@ print()
 
 # 10. Simple Quiz Game
 
-print("=" * 50)
-print("SIMPLE QUIZ GAME (Ethiopia & General Knowledge)")
-print("=" * 50)
-
 # List of questions stored as dictionaries (question, correct answer)
 quiz_questions = [
     {"question": "What is the capital city of Ethiopia?", "answer": "addis ababa"},
@@ -70,15 +61,15 @@ def ask_question(question_data):
 
 def show_result(score, total_questions):
     """Displays the final score and a message based on performance."""
-    print(f"\n🏁 You scored {score} out of {total_questions}!")
+    print(f"\ You scored {score} out of {total_questions}!")
     percentage = (score / total_questions) * 100
 
     if percentage >= 80:
-        print("🌟 Excellent! You really know your stuff!")
+        print("Excellent! You really know your stuff!")
     elif percentage >= 50:
-        print("👍 Good job! Keep learning!")
+        print("Good job! Keep learning!")
     else:
-        print("📚 Keep practicing, you'll improve!")
+        print("Keep practicing, you'll improve!")
 
 
 def run_quiz():
@@ -86,10 +77,10 @@ def run_quiz():
     score = 0
     for question_data in quiz_questions:
         if ask_question(question_data):
-            print("✅ Correct!\n")
+            print(" Correct!\n")
             score += 1
         else:
-            print(f"❌ Incorrect. The correct answer was: {question_data['answer']}\n")
+            print(f"Incorrect. The correct answer was: {question_data['answer']}\n")
 
     show_result(score, len(quiz_questions))
 
@@ -99,11 +90,6 @@ print()
 
 
 # 11. Function with Default & Return
-
-print("=" * 50)
-print("FINAL PRICE CALCULATOR (Default Arguments)")
-print("=" * 50)
-
 
 def calculate_final_price(price, tax_rate=0.15, discount=0):
     """
