@@ -1,11 +1,6 @@
 
 # Exercise 1: Lists & Tuples
 
-print("=" * 50)
-print("EXERCISE 1: LISTS & TUPLES")
-print("=" * 50)
-
-
 favorite_foods = ["shiro", "Kuanta firfir", "Testy tibs", "chocolate", "Ertib"]
 
 print(f"First food: {favorite_foods[0]}")
@@ -30,10 +25,6 @@ print()
 
 # Exercise 2: Dictionaries
 
-print("=" * 50)
-print("EXERCISE 2: DICTIONARIES")
-print("=" * 50)
-
 # key-value pairs 
 student = {
     "name": "Lidia Asamnew",
@@ -52,7 +43,7 @@ print(f"Grade: {student['grade']}")
 student["phone"] = "0900024893"
 
 # Updating an existing key just overwrites its value.
-student["grade"] = "A+"
+student["grade"] = "3.56"
 
 print("\nUpdated student dictionary:")
 for key, value in student.items():
@@ -62,18 +53,14 @@ print()
 
 # Exercise 3: Sets
 
-print("=" * 50)
-print("EXERCISE 3: SETS")
-print("=" * 50)
-
 # A list that contains duplicate names on purpose.
 names_with_duplicates = ["Abel", "Sara", "Abel", "Marta", "Sara", "Daniel"]
 print(f"Original list (with duplicates): {names_with_duplicates}")
 
 # Converting a list to a set automatically removes duplicates, because a set is a collection that only allows UNIQUE items.
 unique_names = set(names_with_duplicates)
-print(f"Set after removing duplicates: {unique_names}")
+print(f"Set after we remove duplicates: {unique_names}")
 
 # .add() inserts a new item into the set (if it isn't already there).
-unique_names.add("Helen")
-print(f"Set after adding a new name: {unique_names}")
+unique_names.add("Lidia")
+print(f"Set after we add a new name: {unique_names}")
