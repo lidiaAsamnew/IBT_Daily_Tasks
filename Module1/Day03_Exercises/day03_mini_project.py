@@ -6,8 +6,6 @@ inventory = {
     "Mouse": 10
 }
 
-
-
 # Option 1: Add a new product
 
 def add_product():

@@ -16,7 +16,6 @@ with open("students.txt", "w") as file:
 
 print("students.txt has been created and filled with student data.")
 
-
 # Reading the file back. We wrap this in try/except in case the file is missing or unreadable.
 try:
     with open("students.txt", "r") as file:
@@ -39,10 +38,7 @@ except FileNotFoundError:
     print("Error: students.txt was not found. Please make sure it was created.")
 print()
 
-
 # Exercise 9: Error Handling
-
-print("=" * 50)
 
 try:
     first_number = float(input("Enter the first number: "))
