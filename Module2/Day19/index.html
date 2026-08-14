@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day 19 DOM Exercises</title>
+    <title>Day 19 Exercises</title>
 
     <style>
         .highlight {
@@ -11,57 +11,56 @@
             background-color: lightgray;
         }
 
-        .item {
+        li {
             margin: 5px;
         }
     </style>
 </head>
+
 <body>
 
-    <h1 id="heading">Original Heading</h1>
+    <h1 id="heading">My Heading</h1>
 
-    <hr>
-
-    <h2>Exercise 2 - Ethiopian Cities</h2>
+    <h2>Ethiopian Cities</h2>
     <ul id="cityList"></ul>
 
-    <hr>
-
-    <h2>Exercise 3 - Event Bubbling</h2>
+    <h2>Event Bubbling</h2>
     <div id="buttonContainer">
         <button id="clickButton">Click Me</button>
     </div>
 
-    <hr>
-
-    <h2>Exercise 4 - Delete Items</h2>
+    <h2>Delete Items</h2>
     <ul id="itemList">
-        <li class="item">
+        <li>
             Item 1
             <button class="deleteButton">Delete</button>
         </li>
 
-        <li class="item">
+        <li>
             Item 2
             <button class="deleteButton">Delete</button>
         </li>
 
-        <li class="item">
+        <li>
             Item 3
             <button class="deleteButton">Delete</button>
         </li>
     </ul>
 
-    <hr>
-
-    <h2>Exercise 5 - Add Items</h2>
+    <h2>Add an Item</h2>
 
     <form id="itemForm">
         <input type="text" id="itemInput" placeholder="Enter an item">
-        <button type="submit">Add Item</button>
+        <button type="submit">Add</button>
     </form>
 
     <ul id="formList"></ul>
+
+    <script src="Ex1.js"></script>
+    <script src="Ex2.js"></script>
+    <script src="Ex3.js"></script>
+    <script src="Ex4.js"></script>
+    <script src="Ex5.js"></script>
 
 </body>
 </html>
