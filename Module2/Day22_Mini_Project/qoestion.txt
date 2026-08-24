@@ -1,0 +1,15 @@
+Opened: Saturday, 15 August 2026, 12:00 AM
+Due: Saturday, 22 August 2026, 12:00 AM
+Just like the birr watch app
+
+do >> push >> submit link
+
+Find a free API (whatever you want)...Just like we do the birr app in class, do a data-driven app based on the API. Make your page attractive (better if you use Tailwind)
+
+
+
+don't forget to push 
+
+Repo_link: https://github.com/lidiaAsamnew/IBT_Daily_Tasks/
+
+Folder: IBT_Daily_Tasks/Module2/Day22_Mini_Project

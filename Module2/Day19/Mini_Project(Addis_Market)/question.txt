@@ -1,0 +1,48 @@
+
+I will give you my programming exercises for this day.
+Complete every exercise exactly as instructed and do not skip anything.
+Requirements:
+
+Create the required folders and files.
+Follow the exact file names and structure given in the task.
+Write complete, working code for every exercise.
+Keep the code simple and beginner-friendly so I can understand and explain it to my teacher.
+Do not use advanced concepts unless the task requires them.
+Add short comments explaining the important parts of the code.
+Follow the teacher's instructions exactly.
+If the task contains multiple levels, keep each level organized as requested.
+Make sure the code can actually run without errors.
+Use appropriate error handling where required.
+Do not change the requirements or add unnecessary features.
+After completing everything, provide:
+The final folder/file structure.
+The complete code for every required file.
+Simple instructions for running and testing each file.
+A short explanation of the important concepts used in each exercise.
+A few likely questions my teacher may ask, with simple answers.
+The exact Git commands to add, commit, and push the completed work to GitHub.
+Before finishing, check every requirement in the assignment and make sure nothing is missing.
+Here is my assignment:
+
+The Daily Exercise from the Reading Sheet.
+
+Do >> Push >> Submit only link
+
+What you will build 
+An Addis Market shopping list: a single-page interactive app where a user adds items they need to buy, marks them as bought, removes them, and sees a live running total of the ETB prices. It is built entirely with today’s tools — selection, manipulation, events and delegation. 
+Today’s requirements 
+• Add an item — a name and an ETB price — from a form, using preventDefault on submit and validating that both fields are filled. 
+• Render each item as a row in the list using createElement and append (do not rebuild the whole list from a string). 
+• Delete any item using a single delegated listener on the list container. 
+• Toggle an item’s "bought" state by toggling a CSS class on its row (style the bought state in CSS). 
+• Show a live running total of the ETB prices that updates whenever items are added or removed. 
+
+What to submit 
+Push index.html, styles.css and app.js to a GitHub repository, with a README describing how to 
+open it and what it does. Keep building it this week — it is the project the rest of the week extends. 
+Check yourself 
+• Does the form add an item without reloading the page (preventDefault working)? 
+• Is there exactly one delete listener on the parent, not one per row? 
+• Does clicking a row toggle a "bought" class whose styling lives in CSS, not inline? 
+• Does the ETB total update correctly when items are added and removed? 
+• Do you cache your element references once, rather than re-querying on every action? 

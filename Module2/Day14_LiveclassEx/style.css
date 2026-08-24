@@ -1,0 +1,132 @@
+/* COMMON PRACTICES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  line-height: 1.6;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* STEP 1: NAV BAR (FLEXBOX)*/
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #03011c;
+  color: aliceblue;
+  padding: 25px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: rgb(241, 238, 234);
+}
+
+/* STEP 2: MAIN (GRID) */
+main {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+
+.sidebar {
+  background-color: #eaeaf3;
+  padding: 25px;
+}
+
+.sidebar h3 {
+  color: rgb(65, 149, 223);
+  margin-bottom: 15px;
+}
+
+.sidebar li {
+  padding: 7px;
+}
+
+.sidebar li a {
+  color: black;
+}
+
+.sidebar li:hover {
+  background-color: rgb(65, 149, 223);
+  color: white;
+  cursor: pointer;
+}
+
+.main-content {
+  padding: 25px;
+}
+
+.main-content h2 {
+  color: rgb(65, 149, 223);
+  margin-bottom: 15px;
+}
+
+/* CARDS (FLEXBOX) */
+.card-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.card {
+  border-style: solid;
+  border-color: #ccc;
+  border-radius: 10px;
+  background-color: #eaeaf3;
+  padding: 25px;
+  flex: 1;
+  text-align: center;
+}
+
+.card h4 {
+  padding-bottom: 5px;
+  color: rgb(2, 46, 26);
+}
+
+.card p {
+  color: rgb(20, 83, 2);
+}
+
+/* GALLERY (GRID) */
+.gallery {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.photo {
+  background-color: aquamarine;
+  border-radius: 10px;
+  text-align: center;
+  color: rgb(2, 12, 34);
+  height: 120px;
+}
+
+.footer {
+  padding: 25px;
+  background-color: #222034;
+  color: white;
+  text-align: center;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+}

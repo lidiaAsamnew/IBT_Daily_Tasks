@@ -1,0 +1,12 @@
+[
+  { "id": 1, "name": "Doro Wat", "category": "Main", "price": 240, "spicy": true, "description": "Slow-cooked chicken stew in berbere sauce, served with a boiled egg." },
+  { "id": 2, "name": "Shiro", "category": "Vegetarian", "price": 120, "spicy": false, "description": "Smooth chickpea stew, a Habesha classic, served with injera." },
+  { "id": 3, "name": "Tibs", "category": "Main", "price": 220, "spicy": true, "description": "Sautéed beef cubes with onions, peppers, and rosemary." },
+  { "id": 4, "name": "Misir Wat", "category": "Vegetarian", "price": 110, "spicy": true, "description": "Spiced red lentil stew simmered in berbere." },
+  { "id": 5, "name": "Kitfo", "category": "Main", "price": 260, "spicy": true, "description": "Minced beef seasoned with mitmita and niter kibbeh, served lightly warmed." },
+  { "id": 6, "name": "Gomen", "category": "Vegetarian", "price": 100, "spicy": false, "description": "Collard greens sautéed with garlic and ginger." },
+  { "id": 7, "name": "Beyainatu", "category": "Vegetarian", "price": 180, "spicy": false, "description": "A sampler platter of vegetarian stews on injera." },
+  { "id": 8, "name": "Special Injera", "category": "Sides", "price": 40, "spicy": false, "description": "Extra sourdough flatbread, made fresh daily." },
+  { "id": 9, "name": "Ayib with Gomen", "category": "Vegetarian", "price": 130, "spicy": false, "description": "Fresh Ethiopian cottage cheese with sautéed greens." },
+  { "id": 10, "name": "Zilzil Tibs", "category": "Main", "price": 250, "spicy": true, "description": "Strips of tender beef, pan-seared and lightly spiced." }
+]

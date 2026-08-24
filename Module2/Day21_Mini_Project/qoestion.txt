@@ -1,0 +1,39 @@
+Day #11 Mini Project
+Completion requirements
+Opened: Friday, 14 August 2026, 12:00 AM
+Due: Friday, 21 August 2026, 12:00 AM
+From the reading sheet
+
+do >> push >> submit link
+
+Mini-Project · A Validated, Persistent Signup Form 
+Tip  What you build 
+A signup form that validates a name and an Ethiopian phone number with regex, shows clear 
+errors, and saves valid entries to localStorage as JSON — restored on reload. It brings together 
+all four of today’s skills (storage, JSON, forms, regex) in one small app, and is the exact pattern 
+behind tomorrow’s Week 3 project. 
+Requirements 
+• A form with labelled name and phone inputs, a submit button, and a dedicated error area. 
+• preventDefault on submit; values trimmed before use. 
+• Validation: name at least two characters; phone matches /^(?:\+251|0)9\d{8}$/. 
+• Clear, specific error messages shown with textContent (never innerHTML). 
+• Valid entries saved to localStorage as JSON and restored on reload, with null and corrupt data 
+handled. 
+
+What to submit 
+A GitHub repository containing index.html, app.js and a README.md that says what the form does 
+and the one step to open it. Commit in clear stages. 
+Check yourself 
+□ Does the form reject an empty or too-short name with a clear message? 
+□ Does the phone regex accept both 0… and +251… numbers, and reject bad ones? 
+□ Are valid entries saved to localStorage as JSON? 
+□ Do the saved entries survive a full page reload? 
+□ Is user text shown with textContent, and is null/corrupt storage handled? 
+
+
+
+don't forget to push 
+
+Repo_link: https://github.com/lidiaAsamnew/IBT_Daily_Tasks/
+
+Folder: IBT_Daily_Tasks/Module2/Day21_Mini_Project

@@ -1,0 +1,34 @@
+#abe {
+    color: red;
+    font-size: 20px;
+    background-color: yellow;
+}
+.my-par{
+    background: green;
+    font-size: 10px;
+
+}
+img{
+    width: 500px;
+    height: 500px;
+}
+.long{
+    border-color: black;
+    border-style: solid;
+    background-color: yellow;
+    border-radius: 10px;
+    padding: 100px;
+    text-align: justify;
+}
+.long:hover{
+    background-color: green;
+    color: white;
+}
+.long::first-letter{
+    color: red;
+    font-size: 100px;
+}
+/*-RGB code:-it is a color code that generated from red, green, blue.*/
+/*-There are many pseudo class and pseudo elements
+-In CSS, pseudo-classes and pseudo-elements are special 
+keywords added to selectors to style elements based on their states or specific parts*/

@@ -1,0 +1,35 @@
+Opened: Thursday, 13 August 2026, 12:00 AM
+Due: Thursday, 20 August 2026, 12:00 AM
+From the reading sheet
+
+do >> push >> submit github link
+
+What you will build 
+A single-page app where the user enters a country name (default it to Ethiopia) and the page fetches 
+and displays facts about it — capital, population, region, currencies and a flag — from the free 
+restcountries.com API. No framework; just fetch, async/await and the DOM. 
+Requirements 
+• Use an async function with fetch to call https://restcountries.com/v3.1/name/{country} from a 
+search input. 
+• Show a "Loading…" indicator while the request is in flight, and remove it when done. 
+• Check res.ok and handle both network and HTTP errors with try/catch, showing a friendly 
+message (e.g. "Country not found"). 
+• On success, render the capital, population (formatted with commas), region and currencies into 
+the DOM with createElement. 
+• Default the page to showing Ethiopia’s facts on first load — capital Addis Ababa.
+What to submit 
+Push index.html, styles.css and app.js to a GitHub repository, with a README describing how to run 
+it and which API it uses. 
+Check yourself 
+• Does the page show a loading state before the data appears? 
+• Does searching a non-existent country show a friendly error rather than crashing? 
+• Do you check res.ok, not just rely on the fetch promise resolving? 
+• Is the population formatted readably (e.g. 120,000,000)? 
+• Does the page default to Ethiopia’s facts on first load?
+
+
+don't forget to push 
+
+Repo_link: https://github.com/lidiaAsamnew/IBT_Daily_Tasks/
+
+Folder: IBT_Daily_Tasks/Module2/Day20_Mini_Project

@@ -1,0 +1,19 @@
+Opened: Saturday, 15 August 2026, 12:00 AM
+Due: Saturday, 22 August 2026, 12:00 AM
+From the reading sheet
+
+do >> push >> submit
+
+Work these in order. Each is small and testable on its own before you move to the next. 
+1. Scaffold index.html with empty containers (status, convert form, result, an empty currency select, and an empty watchlist), then declare the state object in app.js.
+2. Write render() against fake hard-coded rates (e.g. { USD: 0.0177, KES: 2.29 }) and confirm the dropdown fills before you touch the network.
+3. Replace the fake data with loadRates(): fetch the live endpoint, check res.ok, store data.rates into state, and handle the loading and error messages. 
+4. Wire the convert form: preventDefault, read and validate the amount with Number(), look up the rate from state, and show a formatted result line. 
+5. Add the watchlist: an add button (guard against duplicates), renderWatchlist() from state, and one delegated click listener to remove a row by its data-c.
+6. Add save() and load() with localStorage and call them from init(); reload the page and confirm your watchlist is still there.
+
+
+don't forget to push 
+Repo_link: https://github.com/lidiaAsamnew/IBT_Daily_Tasks/
+
+Folder: IBT_Daily_Tasks/Module2/Day22
