@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="description" content="Portfolio of Lidia Asamnew, Software Engineering student at Addis Ababa University. Full-stack, backend, and frontend development.">
+   <meta name="author" content="Lidia Asamnew">
+   <meta name="robots" content="index, follow">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta property="og:title" content="Lidia Asamnew | Software Engineer">
+   <meta property="og:description" content="Portfolio of Lidia Asamnew, Software Engineering student at Addis Ababa University.">
+   <meta property="og:type" content="website">
+
+   <!--=============== FAVICON ===============-->
+   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+   <!--=============== REMIXICONS ===============-->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css">
+
+   <!--=============== SWIPER CSS ===============-->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+
+   <!--=============== CSS ===============-->
+   <link rel="stylesheet" href="assets/css/styles.css">
+
+   <title>Lidia Asamnew | Software Engineer</title>
+</head>
+<body>
+   <a href="#home" class="skip-link">Skip to content</a>
+   <div class="cursor" id="cursor" hidden></div>
+
+   <!--==================== HEADER & NAV ====================-->
+   <header class="header" id="header">
+      <nav class="nav container" aria-label="Primary">
+         <a href="#home" class="nav__logo">Lidia</a>
+
+         <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+               <li>
+                  <a href="#home" class="nav__link active-link">Home</a>
+               </li>
+               <li>
+                  <a href="#about" class="nav__link">About</a>
+               </li>
+               <li>
+                  <a href="#work" class="nav__link">Works</a>
+               </li>
+               <li>
+                  <a href="#service" class="nav__link">What I Do</a>
+               </li>
+               <li>
+                  <a href="#skills" class="nav__link">Skills</a>
+               </li>
+               <li>
+                  <a href="#experience" class="nav__link">Experience</a>
+               </li>
+               <li>
+                  <a href="#contact" class="nav__contact">Contact me</a>
+               </li>
+            </ul>
+
+            <button class="nav__close" id="nav-close" type="button" aria-label="Close menu">
+               <i class="ri-close-large-line"></i>
+            </button>
+         </div>
+
+         <button class="nav__toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+            <i class="ri-menu-line"></i>
+         </button>
+      </nav>
+   </header>
+
+   <!--==================== MAIN ====================-->
+   <main class="main">
+      <!--==================== HOME SECTION ====================-->
+      <section class="home section" id="home">
+         <div class="home__container container grid">
+            <div class="home__data">
+               <h3 class="home__subtitle">Hi! I'm Lidia — Addis Ababa, Ethiopia</h3>
+
+               <h1 class="home__title">
+                  Software Engineer &amp;<br>
+                  <span id="home-typed">Full-Stack Developer</span>
+               </h1>
+
+               <p class="home__description">
+                  I build web applications and backend systems as a Software Engineering student
+                  at Addis Ababa University, with a focus on full-stack, backend, and frontend development.
+               </p>
+
+               <a href="#work" class="button">
+                  View my work <i class="ri-arrow-right-line"></i>
+               </a>
+            </div>
+
+            <div class="home__images">
+               <div class="blob-big home__blob"></div>
+
+               <div class="home__image">
+                  <img src="assets/img/Lidia.jpg" alt="Decorative portrait from the site template" class="home__img" width="460" height="520">
+               </div>
+
+               <div class="home__info">
+                  <p class="home__text">EXPLORE - WORK - SCROLL -</p>
+                  <a href="#about" class="home__scroll" aria-label="Scroll to about section">
+                     <i class="ri-arrow-down-line"></i>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!--==================== ABOUT SECTION ====================-->
+      <section class="about section" id="about">
+         <div class="about__container container grid">
+            <h2 class="about__title">
+               About Me: Software Engineering student who enjoys
+               <span>full-stack</span> and <span>backend</span> development,
+               and is focused on building useful software.
+            </h2>
+
+            <div class="about__data">
+               <p class="about__description">
+                  I am Lidia Asamnew, a Software Engineering student at Addis Ababa University
+                  (expected graduation 2027). I work on web applications and APIs across
+                  frontend and backend, and I keep learning by building projects in class and on my own.
+                  If you want to collaborate, look through my work and get in touch.
+               </p>
+
+               <a href="#contact" class="button">
+                  Contact me <i class="ri-arrow-right-up-line"></i>
+               </a>
+            </div>
+         </div>
+      </section>
+
+      <!--==================== WORK SECTION ====================-->
+      <section class="work section" id="work">
+         <h2 class="section__title">View My <span>Work</span></h2>
+
+         <div class="work__container container">
+            <div class="swiper work__swiper">
+               <div class="swiper-wrapper">
+                  <article class="swiper-slide work__card">
+                     <div class="work__image">
+                        <img src="assets/img/work-img-1.png" alt="" class="work__img" width="400" height="220">
+                     </div>
+                     <span class="work__number">01</span>
+                     <h3 class="work__name">Food Recipes Platform</h3>
+                     <p class="work__description">
+                        Full-stack recipe sharing app: create and browse recipes, search and filter,
+                        bookmarks, ratings, comments, JWT auth, image uploads, and Chapa payments.
+                        Vue 3, Nuxt 3, Hasura GraphQL, Go, PostgreSQL, and Docker (January 2025 – May 2025).
+                     </p>
+                     <ul class="work__tags">
+                        <li>Vue 3</li>
+                        <li>Nuxt 3</li>
+                        <li>Go</li>
+                        <li>GraphQL</li>
+                     </ul>
+                     <a class="work__link" href="https://github.com/lidiaAsamnew/Food_Recipes-Website" target="_blank" rel="noopener noreferrer">
+                        GitHub <i class="ri-github-fill"></i>
+                     </a>
+                  </article>
+
+                  <article class="swiper-slide work__card">
+                     <div class="work__image">
+                        <img src="assets/img/work-img-2.png" alt="" class="work__img" width="400" height="220">
+                     </div>
+                     <span class="work__number">02</span>
+                     <h3 class="work__name">Addis Eat</h3>
+                     <p class="work__description">
+                        Ethiopian food ordering website for Addis Ababa, with searchable dishes,
+                        categories, and a checkout flow. Built with HTML, CSS, and JavaScript.
+                     </p>
+                     <ul class="work__tags">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                     </ul>
+                  </article>
+
+                  <article class="swiper-slide work__card">
+                     <div class="work__image">
+                        <img src="assets/img/work-img-3.png" alt="" class="work__img" width="400" height="220">
+                     </div>
+                     <span class="work__number">03</span>
+                     <h3 class="work__name">HahuJobs</h3>
+                     <p class="work__description">
+                        Layout redesign of three Hahu Jobs pages (home, jobs, and sector detail)
+                        during an internship at Minab Tech. Built with Nuxt 3 and Tailwind CSS,
+                        including a mobile-first layout and dark mode.
+                     </p>
+                     <ul class="work__tags">
+                        <li>Nuxt 3</li>
+                        <li>Vue</li>
+                        <li>Tailwind CSS</li>
+                     </ul>
+                     <a class="work__link" href="https://github.com/lidiaAsamnew/Hahu-jobs" target="_blank" rel="noopener noreferrer">
+                        GitHub <i class="ri-github-fill"></i>
+                     </a>
+                  </article>
+
+                  <article class="swiper-slide work__card">
+                     <div class="work__image">
+                        <img src="assets/img/work-img-4.png" alt="" class="work__img" width="400" height="220">
+                     </div>
+                     <span class="work__number">04</span>
+                     <h3 class="work__name">Swift Supermarket Delivery PWA</h3>
+                     <p class="work__description">
+                        Frontend for a grocery delivery Progressive Web App: shopping cart, checkout,
+                        order tracking, delivery scheduling, and role-based dashboards.
+                        Next.js, TypeScript, and Tailwind CSS (June 2025 – August 2025).
+                     </p>
+                     <ul class="work__tags">
+                        <li>Next.js</li>
+                        <li>TypeScript</li>
+                        <li>Tailwind CSS</li>
+                     </ul>
+                  </article>
+
+                  <article class="swiper-slide work__card">
+                     <div class="work__image">
+                        <img src="assets/img/work-img-5.png" alt="" class="work__img" width="400" height="220">
+                     </div>
+                     <span class="work__number">05</span>
+                     <h3 class="work__name">Hospital Management System Admin UI</h3>
+                     <p class="work__description">
+                        University group project (2024–2025) for a hospital management system.
+                        The public repository is mainly TypeScript, with HTML and CSS.
+                        I am listed as a team member on GitHub.
+                     </p>
+                     <ul class="work__tags">
+                        <li>TypeScript</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                     </ul>
+                     <a class="work__link" href="https://github.com/lidiaAsamnew/Essential_Hospital_Management_System_2024_25" target="_blank" rel="noopener noreferrer">
+                        GitHub <i class="ri-github-fill"></i>
+                     </a>
+                  </article>
+
+                  <article class="swiper-slide work__card">
+                     <div class="work__image work__image--icon" aria-hidden="true">
+                        <i class="ri-parking-box-line"></i>
+                     </div>
+                     <span class="work__number">06</span>
+                     <h3 class="work__name">Smart Parking Backend</h3>
+                     <p class="work__description">
+                        Backend work for a smart parking system. A public repository is not
+                        available yet, so there is no GitHub or live demo link here.
+                     </p>
+                     <ul class="work__tags">
+                        <li>Backend</li>
+                     </ul>
+                  </article>
+               </div>
+
+               <div class="swiper-pagination"></div>
+            </div>
+         </div>
+      </section>
+
+      <!--==================== SERVICES SECTION ====================-->
+      <section class="services section" id="service">
+         <h2 class="section__title"><span>What</span> I Do</h2>
+
+         <div class="services__container container grid">
+            <article class="services__card services-open">
+               <button class="services__header" type="button" aria-expanded="true" aria-controls="service-panel-1">
+                  <div>
+                     <span class="services__number">01</span>
+                     <h3 class="services__name">Frontend Development</h3>
+                  </div>
+                  <i class="ri-add-line services__icon" aria-hidden="true"></i>
+               </button>
+
+               <div class="services__info" id="service-panel-1">
+                  <p class="services__description">
+                     User interfaces with React, Vue, Nuxt, JavaScript, TypeScript, and Tailwind CSS,
+                     including responsive layouts and clear interaction flows.
+                  </p>
+                  <ul class="services__list">
+                     <li class="services__item">React &amp; Vue</li>
+                     <li class="services__item">Nuxt</li>
+                     <li class="services__item">TypeScript</li>
+                     <li class="services__item">Tailwind CSS</li>
+                     <li class="services__item">Responsive UI</li>
+                  </ul>
+               </div>
+            </article>
+
+            <article class="services__card">
+               <button class="services__header" type="button" aria-expanded="false" aria-controls="service-panel-2">
+                  <div>
+                     <span class="services__number">02</span>
+                     <h3 class="services__name">Backend Development</h3>
+                  </div>
+                  <i class="ri-add-line services__icon" aria-hidden="true"></i>
+               </button>
+
+               <div class="services__info" id="service-panel-2">
+                  <p class="services__description">
+                     APIs and server-side logic with Node.js, NestJS, Python, Java, and Go.
+                  </p>
+                  <ul class="services__list">
+                     <li class="services__item">Node.js &amp; NestJS</li>
+                     <li class="services__item">Python &amp; Java</li>
+                     <li class="services__item">Go</li>
+                     <li class="services__item">REST &amp; GraphQL</li>
+                  </ul>
+               </div>
+            </article>
+
+            <article class="services__card">
+               <button class="services__header" type="button" aria-expanded="false" aria-controls="service-panel-3">
+                  <div>
+                     <span class="services__number">03</span>
+                     <h3 class="services__name">Full-Stack Applications</h3>
+                  </div>
+                  <i class="ri-add-line services__icon" aria-hidden="true"></i>
+               </button>
+
+               <div class="services__info" id="service-panel-3">
+                  <p class="services__description">
+                     Connecting frontend and backend into complete applications, from data models
+                     to the screens people use.
+                  </p>
+                  <ul class="services__list">
+                     <li class="services__item">End-to-end features</li>
+                     <li class="services__item">Authentication flows</li>
+                     <li class="services__item">Dashboards</li>
+                     <li class="services__item">PWAs</li>
+                  </ul>
+               </div>
+            </article>
+
+            <article class="services__card">
+               <button class="services__header" type="button" aria-expanded="false" aria-controls="service-panel-4">
+                  <div>
+                     <span class="services__number">04</span>
+                     <h3 class="services__name">Data &amp; Tooling</h3>
+                  </div>
+                  <i class="ri-add-line services__icon" aria-hidden="true"></i>
+               </button>
+
+               <div class="services__info" id="service-panel-4">
+                  <p class="services__description">
+                     Databases and development workflow with PostgreSQL, Prisma, GraphQL, Docker,
+                     Git, GitHub, and Azure DevOps.
+                  </p>
+                  <ul class="services__list">
+                     <li class="services__item">PostgreSQL</li>
+                     <li class="services__item">Prisma &amp; GraphQL</li>
+                     <li class="services__item">Docker</li>
+                     <li class="services__item">Git &amp; GitHub</li>
+                     <li class="services__item">Azure DevOps</li>
+                  </ul>
+               </div>
+            </article>
+         </div>
+      </section>
+
+      <!--==================== SKILLS SECTION ====================-->
+      <section class="skills section" id="skills">
+         <h2 class="section__title">My <span>Skills</span></h2>
+
+         <p class="skills__description container">
+            Technologies I use in coursework and projects, grouped by how I typically apply them.
+         </p>
+
+         <div class="skills__container container grid">
+            <article class="skills__card">
+               <h3 class="skills__title">
+                  <i class="ri-code-s-slash-line"></i> Frontend
+               </h3>
+               <ul class="skills__list">
+                  <li class="skills__item">
+                     <img src="assets/img/skills-frontend-1.svg" alt="" width="32" height="32"> HTML
+                  </li>
+                  <li class="skills__item">
+                     <img src="assets/img/skills-frontend-2.svg" alt="" width="32" height="32"> CSS
+                  </li>
+                  <li class="skills__item">
+                     <img src="assets/img/skills-frontend-3.svg" alt="" width="32" height="32"> JavaScript
+                  </li>
+                  <li class="skills__item">
+                     <i class="ri-hashtag"></i> TypeScript
+                  </li>
+                  <li class="skills__item">
+                     <img src="assets/img/skills-frontend-4.svg" alt="" width="32" height="32"> React
+                  </li>
+                  <li class="skills__item">
+                     <i class="ri-nextjs-line"></i> Next.js
+                  </li>
+                  <li class="skills__item">
+                     <i class="ri-vuejs-line"></i> Vue
+                  </li>
+                  <li class="skills__item">
+                     <i class="ri-window-line"></i> Nuxt
+                  </li>
+                  <li class="skills__item">
+                     <img src="assets/img/skills-frontend-8.svg" alt="" width="32" height="32"> Tailwind CSS
+                  </li>
+               </ul>
+            </article>
+
+            <article class="skills__card">
+               <h3 class="skills__title">
+                  <i class="ri-server-line"></i> Backend
+               </h3>
+               <ul class="skills__list">
+                  <li class="skills__item">
+                     <i class="ri-code-line"></i> Python
+                  </li>
+                  <li class="skills__item">
+                     <i class="ri-cup-line"></i> Java
+                  </li>
+                  <li class="skills__item">
+                     <img src="assets/img/skills-backend-3.svg" alt="" width="32" height="32"> Node.js
+                  </li>
+                  <li class="skills__item">
+                     <i class="ri-terminal-box-line"></i> NestJS
+                  </li>
+                  <li class="skills__item">
+                     <i class="ri-braces-line"></i> Go
+                  </li>
+                  <li class="skills__item">
+                     <img src="assets/img/skills-backend-2.svg" alt="" width="32" height="32"> PostgreSQL
+                  </li>
+                  <li class="skills__item">
+                     <i class="ri-share-line"></i> GraphQL
+                  </li>
+                  <li class="skills__item">
+                     <i class="ri-database-2-line"></i> Prisma
+                  </li>
+               </ul>
+            </article>
+
+            <article class="skills__card">
+               <h3 class="skills__title">
+                  <i class="ri-tools-line"></i> Tools
+               </h3>
+               <ul class="skills__list">
+                  <li class="skills__item">
+                     <img src="assets/img/skills-frontend-6.svg" alt="" width="32" height="32"> Git
+                  </li>
+                  <li class="skills__item">
+                     <img src="assets/img/skills-frontend-7.svg" alt="" width="32" height="32"> GitHub
+                  </li>
+                  <li class="skills__item">
+                     <i class="ri-ship-2-line"></i> Docker
+                  </li>
+                  <li class="skills__item">
+                     <i class="ri-cloud-line"></i> Azure DevOps
+                  </li>
+               </ul>
+            </article>
+         </div>
+      </section>
+
+      <!--==================== EXPERIENCE SECTION ====================-->
+      <section class="experience section" id="experience">
+         <h2 class="section__title"><span>Education</span> &amp; Work</h2>
+
+         <div class="experience__container container grid">
+            <article class="experience__card">
+               <span class="experience__date">February 2023 – June 2027</span>
+               <h3 class="experience__title">B.Sc. Software Engineering</h3>
+               <p class="experience__place">Addis Ababa University</p>
+               <p class="experience__text">
+                  Undergraduate Software Engineering program. Expected graduation: 2027.
+               </p>
+            </article>
+
+            <article class="experience__card">
+               <span class="experience__date">Internship</span>
+               <h3 class="experience__title">Hahu Jobs layout redesign</h3>
+               <p class="experience__place">Minab Tech</p>
+               <p class="experience__text">
+                  Redesigned the home, jobs, and sector detail pages of the Hahu Jobs website
+                  with Nuxt 3 and Tailwind CSS.
+               </p>
+            </article>
+
+            <article class="experience__card">
+               <span class="experience__date">June 2025 – August 2025</span>
+               <h3 class="experience__title">Swift Supermarket Delivery PWA</h3>
+               <p class="experience__place">Frontend development</p>
+               <p class="experience__text">
+                  Built customer and staff interfaces, cart and checkout, order tracking,
+                  and role-based dashboards with Next.js, TypeScript, and Tailwind CSS.
+               </p>
+            </article>
+
+            <article class="experience__card">
+               <span class="experience__date">January 2025 – May 2025</span>
+               <h3 class="experience__title">Food Recipes Platform</h3>
+               <p class="experience__place">Full-stack development</p>
+               <p class="experience__text">
+                  Designed the database and GraphQL API, built the Vue 3 / Nuxt 3 frontend,
+                  and implemented JWT authentication, search, filtering, and bookmarks.
+               </p>
+            </article>
+         </div>
+      </section>
+
+      <!--==================== CONTACT SECTION ====================-->
+      <section class="contact section" id="contact">
+         <h2 class="section__title">Contact <span>Me</span></h2>
+
+         <div class="contact__container container grid">
+            <form class="contact__form" id="contact-form">
+               <div class="contact__group">
+                  <label class="contact__label" for="user_name">Name</label>
+                  <input class="contact__input" type="text" name="user_name" id="user_name" placeholder="Your name" required minlength="2" autocomplete="name">
+               </div>
+
+               <div class="contact__group">
+                  <label class="contact__label" for="user_email">Email</label>
+                  <input class="contact__input" type="email" name="user_email" id="user_email" placeholder="you@email.com" required autocomplete="email">
+               </div>
+
+               <div class="contact__group">
+                  <label class="contact__label" for="user_message">Message</label>
+                  <textarea class="contact__input contact__area" name="user_message" id="user_message" placeholder="Write your message" required minlength="10" autocomplete="off"></textarea>
+               </div>
+
+               <p class="contact__message" id="contact-message" role="status"></p>
+
+               <button type="submit" class="button contact__button">
+                  Send Message <i class="ri-send-plane-2-line"></i>
+               </button>
+            </form>
+
+            <div class="contact__info">
+               <article class="contact__card">
+                  <i class="ri-mail-line contact__icon"></i>
+                  <div>
+                     <h3 class="contact__card-title">Email</h3>
+                     <a class="contact__address" href="mailto:lidia.yirbe@gmail.com">lidia.yirbe@gmail.com</a>
+                  </div>
+               </article>
+
+               <article class="contact__card">
+                  <i class="ri-phone-line contact__icon"></i>
+                  <div>
+                     <h3 class="contact__card-title">Phone</h3>
+                     <a class="contact__address" href="tel:+251900024893">+251 900 024 893</a>
+                  </div>
+               </article>
+
+               <article class="contact__card">
+                  <i class="ri-map-pin-line contact__icon"></i>
+                  <div>
+                     <h3 class="contact__card-title">Location</h3>
+                     <span class="contact__address">Addis Ababa, Ethiopia</span>
+                  </div>
+               </article>
+
+               <article class="contact__card">
+                  <i class="ri-github-fill contact__icon"></i>
+                  <div>
+                     <h3 class="contact__card-title">GitHub</h3>
+                     <a class="contact__address" href="https://github.com/lidiaAsamnew" target="_blank" rel="noopener noreferrer">github.com/lidiaAsamnew</a>
+                  </div>
+               </article>
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <!--==================== FOOTER ====================-->
+   <footer class="footer">
+      <div class="footer__container container">
+         <h2 class="footer__title">
+            Let’s talk about software — frontend, backend, or full-stack.
+         </h2>
+
+         <ul class="footer__links">
+            <li><a href="#work">Work</a></li>
+            <li><a href="#service">What I Do</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+         </ul>
+
+         <ul class="footer__social">
+            <li>
+               <a href="https://github.com/lidiaAsamnew" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <i class="ri-github-fill"></i>
+               </a>
+            </li>
+            <li>
+               <a href="mailto:lidia.yirbe@gmail.com" aria-label="Email">
+                  <i class="ri-mail-fill"></i>
+               </a>
+            </li>
+            <li>
+               <a href="tel:+251900024893" aria-label="Phone">
+                  <i class="ri-phone-fill"></i>
+               </a>
+            </li>
+         </ul>
+
+         <p class="footer__copy">&#169; 2026 Lidia Asamnew. All rights reserved.</p>
+      </div>
+   </footer>
+
+   <!--========== SCROLL UP ==========-->
+   <a href="#home" class="scrollup" id="scroll-up" aria-label="Scroll to top">
+      <i class="ri-arrow-up-line"></i>
+   </a>
+
+   <!--=============== SCROLLREVEAL ===============-->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+
+   <!--=============== TYPED JS ===============-->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.min.js"></script>
+
+   <!--=============== SWIPER JS ===============-->
+   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+   <!--=============== MAIN JS ===============-->
+   <script src="assets/js/main.js"></script>
+</body>
+</html>
