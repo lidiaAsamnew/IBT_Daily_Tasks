@@ -1,0 +1,30 @@
+h1 {
+  color: #352a2a;
+  text-align: center;
+}
+
+.card-container {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+}
+
+.footer {
+  margin-top: 30px;
+  text-align: center;
+}
+
+@media (min-width: 680px) {
+  .card-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
