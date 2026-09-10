@@ -4,14 +4,14 @@ import Card from "./Card";
 function Footer() {
   return (
     <div className="footer">
-      <p>Ephrem Tesfaye</p>
+      <p>Lidia Asamnew</p>
       <Card>
-        <p>Contact: ABC</p>
-        <p>Phone: 123-456-7890</p>
+        <p>Contact: AphoLi</p>
+        <p>Phone: 0900023344</p>
       </Card>
 
       <Card>
-        <h6>Address: XYZ Street, City</h6>
+        <h6>Address: Ferensay legasiyon, Addis Ababa</h6>
       </Card>
     </div>
   );
