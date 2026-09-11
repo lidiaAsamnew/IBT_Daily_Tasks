@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
-import Home from "./pages/Home";
-import Menu from "./pages/Menu";
-import DishDetail from "./pages/DishDetail";
-import Cart from "./pages/Cart";
-import Checkout from "./pages/Checkout";
-import NotFound from "./pages/NotFound";
+import Home from "./ui/Home";
+import Menu from "./menu/Menu";
+import DishDetail from "./menu/DishDetail";
+import Cart from "./cart/Cart";
+import Checkout from "./checkout/Checkout";
+import NotFound from "./ui/NotFound";
 import "./css/style.css";
 
 function App() {

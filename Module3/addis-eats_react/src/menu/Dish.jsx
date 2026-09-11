@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import Card from "./Card";
+import Card from "../ui/Card";
 
 function Dish({ name, price, category, isSpicy, currency = "ETB", onAdd }) {
   // const [count, setCount] = useState(0);

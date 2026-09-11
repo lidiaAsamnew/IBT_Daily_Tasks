@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Dish from "./Dish";
-import OrderForm from "./OrderForm";
+import OrderForm from "../checkout/OrderForm";
 import CategoryBar from "./CategoryBar";
 
 function Main() {
