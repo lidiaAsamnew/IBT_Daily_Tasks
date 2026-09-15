@@ -1,7 +1,7 @@
-import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { getMenu } from "../api/menu";
 import useFetch from "../hooks/useFetch";
+import { useCart } from "../cart/cart-context";
 import CategoryBar from "./CategoryBar";
 import DishList from "./DishList";
 import OrderForm from "../checkout/OrderForm";
@@ -11,7 +11,7 @@ const categories = ["All", "Main Dish", "Side Dish", "Beverage"];
 function Menu() {
   const { data: menu, loading, error } = useFetch(getMenu);
   const [searchParams, setSearchParams] = useSearchParams();
-  const [total, setTotal] = useState(0);
+  const { addItem, total } = useCart();
 
   const category = searchParams.get("category") || "All";
 
@@ -21,10 +21,6 @@ function Menu() {
     } else {
       setSearchParams({ category: nextCategory });
     }
-  }
-
-  function addToOrder(price) {
-    setTotal(total + price);
   }
 
   if (loading) {
@@ -49,7 +45,7 @@ function Menu() {
         selectedCategory={category}
         onSelectCategory={handleSelectCategory}
       />
-      <DishList dishes={shown} onAdd={addToOrder} />
+      <DishList dishes={shown} onAdd={addItem} />
       <OrderForm />
     </div>
   );
