@@ -4,9 +4,11 @@ import Footer from "./ui/Footer";
 
 function Layout() {
   return (
-    <div>
+    <div className="app">
       <Header />
-      <Outlet />
+      <main className="site-main">
+        <Outlet />
+      </main>
       <Footer />
     </div>
   );

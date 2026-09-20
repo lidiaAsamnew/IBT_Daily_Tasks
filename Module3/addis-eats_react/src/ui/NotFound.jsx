@@ -2,11 +2,13 @@ import { Link } from "react-router-dom";
 
 function NotFound() {
   return (
-    <div>
+    <div className="page status">
       <h2>Page not found</h2>
       <p>Sorry, we could not find that page.</p>
-      <p>
-        <Link to="/">Go home</Link>
+      <p className="page-links">
+        <Link className="btn" to="/">
+          Go home
+        </Link>
       </p>
     </div>
   );

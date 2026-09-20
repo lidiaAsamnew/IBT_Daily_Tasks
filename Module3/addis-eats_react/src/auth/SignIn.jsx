@@ -28,11 +28,11 @@ function SignIn() {
   }
 
   return (
-    <div>
+    <div className="page form-card">
       <h2>Sign in</h2>
-      <p>Sign in to continue to checkout.</p>
+      <p className="lede">Sign in to continue to checkout.</p>
       <form onSubmit={handleSubmit}>
-        <p>
+        <div className="field">
           <label htmlFor="signin-name">Name: </label>
           <input
             id="signin-name"
@@ -47,9 +47,9 @@ function SignIn() {
             aria-invalid={Boolean(error)}
             aria-describedby={error ? "signin-error" : undefined}
           />
-        </p>
+        </div>
         {error && (
-          <p id="signin-error" role="alert">
+          <p id="signin-error" className="error-text" role="alert">
             {error}
           </p>
         )}

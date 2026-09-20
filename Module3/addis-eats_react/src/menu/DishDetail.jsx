@@ -9,11 +9,19 @@ function DishDetail() {
   const { addItem } = useCart();
 
   if (loading) {
-    return <p role="status">Loading dish...</p>;
+    return (
+      <p className="status" role="status">
+        Loading dish...
+      </p>
+    );
   }
 
   if (error) {
-    return <p role="alert">{error}</p>;
+    return (
+      <p className="status status--error" role="alert">
+        {error}
+      </p>
+    );
   }
 
   const dishes = Array.isArray(menu) ? menu : [];
@@ -21,25 +29,27 @@ function DishDetail() {
 
   if (!dish) {
     return (
-      <div role="status">
+      <div className="page status" role="status">
         <h2>Dish not found</h2>
         <p>We could not find a dish with ID {id || "(missing)"}.</p>
-        <p>
-          <Link to="/menu">Back to menu</Link>
+        <p className="page-links">
+          <Link className="btn" to="/menu">
+            Back to menu
+          </Link>
         </p>
       </div>
     );
   }
 
   return (
-    <div>
+    <div className="page detail-card">
       <h2>{dish.name}</h2>
-      <p>
+      <p className="price">
         {dish.price} {dish.currency || "ETB"}
       </p>
-      <p>{dish.category}</p>
-      <p>{dish.isSpicy && <em>Spicy</em>}</p>
-      <p>
+      <p className="meta">{dish.category}</p>
+      {dish.isSpicy ? <p className="badge">Spicy</p> : null}
+      <p className="page-links">
         <button
           type="button"
           onClick={() => addItem(dish)}
@@ -47,9 +57,9 @@ function DishDetail() {
         >
           Add
         </button>
-      </p>
-      <p>
-        <Link to="/menu">Back to menu</Link>
+        <Link className="btn btn-secondary" to="/menu">
+          Back to menu
+        </Link>
       </p>
     </div>
   );

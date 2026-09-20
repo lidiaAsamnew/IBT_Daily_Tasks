@@ -6,24 +6,28 @@ function Cart() {
 
   if (items.length === 0) {
     return (
-      <div>
+      <div className="page status">
         <h2>Your cart</h2>
         <p role="status">Your cart is empty for now.</p>
         <p>Add dishes from the menu before checking out.</p>
-        <p>
-          <Link to="/menu">Browse the menu</Link>
+        <p className="page-links">
+          <Link className="btn" to="/menu">
+            Browse the menu
+          </Link>
         </p>
       </div>
     );
   }
 
   return (
-    <div>
+    <div className="page">
       <h2>Your cart</h2>
-      <ul>
+      <ul className="cart-list">
         {items.map((item) => (
-          <li key={item.id}>
-            {item.name} x {item.quantity} — {item.price * item.quantity} ETB{" "}
+          <li className="cart-line" key={item.id}>
+            <span>
+              {item.name} x {item.quantity} — {item.price * item.quantity} ETB
+            </span>
             <button
               type="button"
               onClick={() => removeItem(item.id)}
@@ -35,13 +39,13 @@ function Cart() {
         ))}
       </ul>
       <h3>Total : {total} ETB</h3>
-      <p>
+      <p className="cart-actions">
         <button type="button" onClick={clearCart}>
           Clear cart
         </button>
-      </p>
-      <p>
-        <Link to="/menu">Browse the menu</Link>
+        <Link className="btn btn-secondary" to="/menu">
+          Browse the menu
+        </Link>
       </p>
     </div>
   );

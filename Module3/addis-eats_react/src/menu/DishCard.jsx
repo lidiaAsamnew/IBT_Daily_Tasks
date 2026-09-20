@@ -10,11 +10,11 @@ function DishCard({ dish, onAdd }) {
         <h2>
           <Link to={`/menu/${id}`}>{name}</Link>
         </h2>
-        <p>
+        <p className="price">
           {price} {currency}
         </p>
-        <p>{category}</p>
-        <p>{isSpicy && <em>Spicy</em>}</p>
+        <p className="meta">{category}</p>
+        {isSpicy ? <p className="badge">Spicy</p> : null}
         <button
           type="button"
           onClick={() => onAdd(dish)}

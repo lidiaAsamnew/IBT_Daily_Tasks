@@ -82,13 +82,15 @@ function Checkout() {
 
   if (submitted) {
     return (
-      <div>
+      <div className="page status">
         <h2>Order placed</h2>
         <p role="status">
           Thank you, {form.name}. Your order is on the way to {form.area}.
         </p>
-        <p>
-          <Link to="/menu">Back to menu</Link>
+        <p className="page-links">
+          <Link className="btn" to="/menu">
+            Back to menu
+          </Link>
         </p>
       </div>
     );
@@ -96,127 +98,135 @@ function Checkout() {
 
   if (items.length === 0) {
     return (
-      <div>
+      <div className="page status">
         <h2>Checkout</h2>
         <p role="status">Your cart is empty, so you cannot place an order yet.</p>
-        <p>
-          <Link to="/menu">Browse the menu</Link>
-        </p>
-        <p>
-          <Link to="/cart">Back to cart</Link>
+        <p className="page-links">
+          <Link className="btn" to="/menu">
+            Browse the menu
+          </Link>
+          <Link className="btn btn-secondary" to="/cart">
+            Back to cart
+          </Link>
         </p>
       </div>
     );
   }
 
   return (
-    <div>
+    <div className="page">
       <h2>Checkout</h2>
-
-      <div>
-        <h3>Order summary</h3>
-        <ul>
-          {items.map((item) => (
-            <li key={item.id}>
-              {item.name} x {item.quantity} — {item.price * item.quantity} ETB
-            </li>
-          ))}
-        </ul>
-        <p>Total : {total} ETB</p>
-      </div>
-
-      <h3>Delivery details</h3>
-      <form onSubmit={handleSubmit} noValidate>
-        <p>
-          <label htmlFor="name">Name: </label>
-          <input
-            id="name"
-            name="name"
-            type="text"
-            value={form.name}
-            onChange={handleChange}
-            placeholder="Your name"
-            autoComplete="name"
-            aria-invalid={Boolean(errors.name)}
-            aria-describedby={errors.name ? "name-error" : undefined}
-          />
-        </p>
-        {errors.name && (
-          <p id="name-error" role="alert">
-            {errors.name}
-          </p>
-        )}
-
-        <p>
-          <label htmlFor="phone">Phone: </label>
-          <input
-            id="phone"
-            name="phone"
-            type="tel"
-            inputMode="numeric"
-            value={form.phone}
-            onChange={handleChange}
-            placeholder="10-digit phone number"
-            autoComplete="tel"
-            aria-invalid={Boolean(errors.phone)}
-            aria-describedby={errors.phone ? "phone-error" : undefined}
-          />
-        </p>
-        {errors.phone && (
-          <p id="phone-error" role="alert">
-            {errors.phone}
-          </p>
-        )}
-
-        <p>
-          <label htmlFor="area">Delivery area: </label>
-          <select
-            id="area"
-            name="area"
-            value={form.area}
-            onChange={handleChange}
-            aria-invalid={Boolean(errors.area)}
-            aria-describedby={errors.area ? "area-error" : undefined}
-          >
-            <option value="">Select an area</option>
-            {areas.map((area) => (
-              <option key={area} value={area}>
-                {area}
-              </option>
+      <div className="checkout-grid">
+        <div className="panel">
+          <h3>Order summary</h3>
+          <ul className="cart-list">
+            {items.map((item) => (
+              <li className="cart-line" key={item.id}>
+                {item.name} x {item.quantity} — {item.price * item.quantity} ETB
+              </li>
             ))}
-          </select>
-        </p>
-        {errors.area && (
-          <p id="area-error" role="alert">
-            {errors.area}
+          </ul>
+          <p>
+            Total : <strong>{total} ETB</strong>
           </p>
-        )}
+        </div>
 
-        <p>
-          <label htmlFor="address">Delivery address: </label>
-          <input
-            id="address"
-            name="address"
-            type="text"
-            value={form.address}
-            onChange={handleChange}
-            placeholder="Street, building, or landmark"
-            autoComplete="street-address"
-            aria-invalid={Boolean(errors.address)}
-            aria-describedby={errors.address ? "address-error" : undefined}
-          />
-        </p>
-        {errors.address && (
-          <p id="address-error" role="alert">
-            {errors.address}
-          </p>
-        )}
+        <div className="form-card">
+          <h3>Delivery details</h3>
+          <form onSubmit={handleSubmit} noValidate>
+            <div className="field">
+              <label htmlFor="name">Name: </label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                value={form.name}
+                onChange={handleChange}
+                placeholder="Your name"
+                autoComplete="name"
+                aria-invalid={Boolean(errors.name)}
+                aria-describedby={errors.name ? "name-error" : undefined}
+              />
+            </div>
+            {errors.name && (
+              <p id="name-error" className="error-text" role="alert">
+                {errors.name}
+              </p>
+            )}
 
-        <button type="submit">Place order</button>
-      </form>
+            <div className="field">
+              <label htmlFor="phone">Phone: </label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                inputMode="numeric"
+                value={form.phone}
+                onChange={handleChange}
+                placeholder="10-digit phone number"
+                autoComplete="tel"
+                aria-invalid={Boolean(errors.phone)}
+                aria-describedby={errors.phone ? "phone-error" : undefined}
+              />
+            </div>
+            {errors.phone && (
+              <p id="phone-error" className="error-text" role="alert">
+                {errors.phone}
+              </p>
+            )}
 
-      <p>
-        <Link to="/cart">Back to cart</Link>
+            <div className="field">
+              <label htmlFor="area">Delivery area: </label>
+              <select
+                id="area"
+                name="area"
+                value={form.area}
+                onChange={handleChange}
+                aria-invalid={Boolean(errors.area)}
+                aria-describedby={errors.area ? "area-error" : undefined}
+              >
+                <option value="">Select an area</option>
+                {areas.map((area) => (
+                  <option key={area} value={area}>
+                    {area}
+                  </option>
+                ))}
+              </select>
+            </div>
+            {errors.area && (
+              <p id="area-error" className="error-text" role="alert">
+                {errors.area}
+              </p>
+            )}
+
+            <div className="field">
+              <label htmlFor="address">Delivery address: </label>
+              <input
+                id="address"
+                name="address"
+                type="text"
+                value={form.address}
+                onChange={handleChange}
+                placeholder="Street, building, or landmark"
+                autoComplete="street-address"
+                aria-invalid={Boolean(errors.address)}
+                aria-describedby={errors.address ? "address-error" : undefined}
+              />
+            </div>
+            {errors.address && (
+              <p id="address-error" className="error-text" role="alert">
+                {errors.address}
+              </p>
+            )}
+
+            <button type="submit">Place order</button>
+          </form>
+        </div>
+      </div>
+      <p className="page-links">
+        <Link className="btn btn-secondary" to="/cart">
+          Back to cart
+        </Link>
       </p>
     </div>
   );

@@ -1,9 +1,10 @@
 function CategoryBar({ categories, selectedCategory, onSelectCategory }) {
   return (
-    <nav aria-label="Menu categories">
+    <nav className="category-bar" aria-label="Menu categories">
       {categories.map((cat) => (
         <button
           type="button"
+          className="chip"
           key={cat}
           onClick={() => onSelectCategory(cat)}
           aria-pressed={cat === selectedCategory}

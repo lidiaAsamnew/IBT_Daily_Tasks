@@ -25,15 +25,27 @@ function Menu() {
   }
 
   if (loading) {
-    return <p role="status">Loading menu...</p>;
+    return (
+      <p className="status" role="status">
+        Loading menu...
+      </p>
+    );
   }
 
   if (error) {
-    return <p role="alert">{error}</p>;
+    return (
+      <p className="status status--error" role="alert">
+        {error}
+      </p>
+    );
   }
 
   if (dishes.length === 0) {
-    return <p role="status">The menu is empty right now.</p>;
+    return (
+      <p className="status" role="status">
+        The menu is empty right now.
+      </p>
+    );
   }
 
   const shown =
@@ -42,9 +54,16 @@ function Menu() {
       : dishes.filter((item) => item.category === category);
 
   return (
-    <div>
-      <h2>Addis Eats - Our Menu</h2>
-      <p>Total : {total}</p>
+    <div className="page">
+      <div className="page-head">
+        <div>
+          <h2>Addis Eats - Our Menu</h2>
+          <p className="lede">Choose a category, then add dishes to your cart.</p>
+        </div>
+        <p className="cart-total">
+          Total : <strong>{total}</strong>
+        </p>
+      </div>
       <CategoryBar
         categories={categories}
         selectedCategory={category}
