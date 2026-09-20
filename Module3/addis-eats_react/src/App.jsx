@@ -21,7 +21,7 @@ function App() {
       <ErrorBoundary>
         <AuthProvider>
           <CartProvider>
-            <Suspense fallback={<p>Loading page...</p>}>
+            <Suspense fallback={<p role="status">Loading page...</p>}>
               <Routes>
                 <Route path="/" element={<Layout />}>
                   <Route index element={<Home />} />

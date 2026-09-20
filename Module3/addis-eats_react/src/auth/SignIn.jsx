@@ -43,9 +43,16 @@ function SignIn() {
               setError("");
             }}
             placeholder="Your name"
+            autoComplete="name"
+            aria-invalid={Boolean(error)}
+            aria-describedby={error ? "signin-error" : undefined}
           />
         </p>
-        {error && <p>{error}</p>}
+        {error && (
+          <p id="signin-error" role="alert">
+            {error}
+          </p>
+        )}
         <button type="submit">Sign in</button>
       </form>
     </div>

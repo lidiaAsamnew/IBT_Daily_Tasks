@@ -1,16 +1,38 @@
-# React + Vite
+# Addis Eats
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Addis Eats is a React restaurant ordering mini-project for IBT College Canada CodeOps Module 3 Day 35.
 
-Currently, two official plugins are available:
+## Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+1. Install [Node.js](https://nodejs.org/) (includes npm).
+2. Open a terminal in this folder: `Module3/addis-eats_react`.
+3. Install dependencies:
 
-## React Compiler
+```bash
+npm install
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+4. Start the development server:
 
-## Expanding the ESLint configuration
+```bash
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+5. Open the local URL printed in the terminal (usually `http://localhost:5173`).
+
+## Scripts
+
+- `npm run dev` — start the Vite development server
+- `npm run build` — create a production build
+- `npm run preview` — preview the production build
+- `npm run lint` — run ESLint
+
+## Routes
+
+- `/` — Home
+- `/menu` — Menu (optional `?category=` filter)
+- `/menu/:id` — Dish details
+- `/cart` — Cart
+- `/signin` — Sign in
+- `/checkout` — Checkout (requires sign in)
+- unknown paths — Not Found

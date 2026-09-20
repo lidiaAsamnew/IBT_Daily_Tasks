@@ -9,20 +9,21 @@ function DishDetail() {
   const { addItem } = useCart();
 
   if (loading) {
-    return <p>Loading dish...</p>;
+    return <p role="status">Loading dish...</p>;
   }
 
   if (error) {
-    return <p>{error}</p>;
+    return <p role="alert">{error}</p>;
   }
 
-  const dish = menu.find((item) => String(item.id) === String(id));
+  const dishes = Array.isArray(menu) ? menu : [];
+  const dish = dishes.find((item) => String(item.id) === String(id));
 
   if (!dish) {
     return (
-      <div>
+      <div role="status">
         <h2>Dish not found</h2>
-        <p>We could not find a dish with ID {id}.</p>
+        <p>We could not find a dish with ID {id || "(missing)"}.</p>
         <p>
           <Link to="/menu">Back to menu</Link>
         </p>
@@ -39,7 +40,11 @@ function DishDetail() {
       <p>{dish.category}</p>
       <p>{dish.isSpicy && <em>Spicy</em>}</p>
       <p>
-        <button type="button" onClick={() => addItem(dish)}>
+        <button
+          type="button"
+          onClick={() => addItem(dish)}
+          aria-label={`Add ${dish.name} to cart`}
+        >
           Add
         </button>
       </p>

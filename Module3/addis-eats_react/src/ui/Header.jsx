@@ -8,7 +8,7 @@ function Header() {
   return (
     <div>
       <h1>Addis Eats</h1>
-      <nav>
+      <nav aria-label="Main">
         <Link to="/">Home</Link>
         {" | "}
         <Link to="/menu">Menu</Link>
@@ -19,7 +19,7 @@ function Header() {
         {" | "}
         {user ? (
           <>
-            Signed in as {user.name}
+            <span>Signed in as {user.name}</span>
             {" "}
             <button type="button" onClick={signOut}>
               Sign out

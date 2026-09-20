@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 function OrderForm() {
   const [form, setForm] = useState({
@@ -16,13 +16,11 @@ function OrderForm() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    // VALIDATE PHONE NUMBER
     if (!/^\d{10}$/.test(form.phone)) {
       alert("Please enter a valid 10-digit phone number.");
       return;
     }
 
-    console.log(form);
     alert(`Order submitted for ${form.name} in ${form.area}`);
   }
 
@@ -30,32 +28,39 @@ function OrderForm() {
     <div>
       <h2>Customer Information</h2>
       <form onSubmit={handleSubmit}>
-        <label>Name: </label>
+        <label htmlFor="order-name">Name: </label>
         <input
+          id="order-name"
           name="name"
           value={form.name}
           onChange={handleChange}
           type="text"
           placeholder="Your Name"
         />
-        <br></br>
-        <label>Phone: </label>
+        <br />
+        <label htmlFor="order-phone">Phone: </label>
         <input
+          id="order-phone"
           name="phone"
           value={form.phone}
           onChange={handleChange}
           type="text"
           placeholder="Your Phone No"
         />
-        <br></br>
-        <label>Area: </label>
-        <select name="area" value={form.area} onChange={handleChange}>
+        <br />
+        <label htmlFor="order-area">Area: </label>
+        <select
+          id="order-area"
+          name="area"
+          value={form.area}
+          onChange={handleChange}
+        >
           <option value="Summit">Summit</option>
           <option value="Akaki">Akaki</option>
-          <option value="Bole">Bole</option>\
+          <option value="Bole">Bole</option>
           <option value="Gullele">Gullele</option>
         </select>
-        <br></br>
+        <br />
         <button type="submit">Submit</button>
       </form>
     </div>

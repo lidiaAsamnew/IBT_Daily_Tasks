@@ -14,6 +14,7 @@ function Menu() {
   const { addItem, total } = useCart();
 
   const category = searchParams.get("category") || "All";
+  const dishes = Array.isArray(menu) ? menu : [];
 
   function handleSelectCategory(nextCategory) {
     if (nextCategory === "All") {
@@ -24,22 +25,26 @@ function Menu() {
   }
 
   if (loading) {
-    return <p>Loading menu...</p>;
+    return <p role="status">Loading menu...</p>;
   }
 
   if (error) {
-    return <p>{error}</p>;
+    return <p role="alert">{error}</p>;
+  }
+
+  if (dishes.length === 0) {
+    return <p role="status">The menu is empty right now.</p>;
   }
 
   const shown =
     category === "All"
-      ? menu
-      : menu.filter((item) => item.category === category);
+      ? dishes
+      : dishes.filter((item) => item.category === category);
 
   return (
     <div>
       <h2>Addis Eats - Our Menu</h2>
-      <h1>Total : {total}</h1>
+      <p>Total : {total}</p>
       <CategoryBar
         categories={categories}
         selectedCategory={category}

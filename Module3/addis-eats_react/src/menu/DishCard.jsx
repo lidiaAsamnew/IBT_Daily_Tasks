@@ -15,7 +15,11 @@ function DishCard({ dish, onAdd }) {
         </p>
         <p>{category}</p>
         <p>{isSpicy && <em>Spicy</em>}</p>
-        <button type="button" onClick={() => onAdd(dish)}>
+        <button
+          type="button"
+          onClick={() => onAdd(dish)}
+          aria-label={`Add ${name} to cart`}
+        >
           Add
         </button>
       </Card>

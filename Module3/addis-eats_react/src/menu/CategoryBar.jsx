@@ -1,6 +1,6 @@
 function CategoryBar({ categories, selectedCategory, onSelectCategory }) {
   return (
-    <div>
+    <nav aria-label="Menu categories">
       {categories.map((cat) => (
         <button
           type="button"
@@ -11,7 +11,7 @@ function CategoryBar({ categories, selectedCategory, onSelectCategory }) {
           {cat}
         </button>
       ))}
-    </div>
+    </nav>
   );
 }
 

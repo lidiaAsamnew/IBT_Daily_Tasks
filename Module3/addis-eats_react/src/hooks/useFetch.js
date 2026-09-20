@@ -13,7 +13,7 @@ function useFetch(fetcher) {
         if (ignore) {
           return;
         }
-        setData(result);
+        setData(Array.isArray(result) ? result : []);
         setLoading(false);
       })
       .catch(() => {

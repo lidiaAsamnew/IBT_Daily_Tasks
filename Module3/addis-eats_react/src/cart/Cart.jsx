@@ -8,7 +8,8 @@ function Cart() {
     return (
       <div>
         <h2>Your cart</h2>
-        <p>Your cart is empty for now.</p>
+        <p role="status">Your cart is empty for now.</p>
+        <p>Add dishes from the menu before checking out.</p>
         <p>
           <Link to="/menu">Browse the menu</Link>
         </p>
@@ -22,9 +23,12 @@ function Cart() {
       <ul>
         {items.map((item) => (
           <li key={item.id}>
-            {item.name} x {item.quantity} — {item.price * item.quantity} ETB
-            {" "}
-            <button type="button" onClick={() => removeItem(item.id)}>
+            {item.name} x {item.quantity} — {item.price * item.quantity} ETB{" "}
+            <button
+              type="button"
+              onClick={() => removeItem(item.id)}
+              aria-label={`Remove ${item.name} from cart`}
+            >
               Remove
             </button>
           </li>
