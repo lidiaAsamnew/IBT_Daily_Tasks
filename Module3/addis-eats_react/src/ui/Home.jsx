@@ -1,35 +1,67 @@
 import { Link } from "react-router-dom";
+import { getMenu } from "../api/menu";
+import useFetch from "../hooks/useFetch";
 
 function Home() {
+  const { data: menu, loading, error } = useFetch(getMenu);
+  const dishes = Array.isArray(menu) ? menu : [];
+  const specials = dishes.filter((item) => item.special);
+
   return (
-    <div className="page">
+    <div className="page home-page">
       <section className="hero">
-        <div>
-          <h2>Welcome to Addis Eats</h2>
+        <div className="hero-inner">
+          <h2>Ethiopian food, delivered across Addis</h2>
           <p>
-            Order Ethiopian food from our menu. Injera, wot, and fresh flavors
-            from Addis Ababa, delivered across the city.
+            Order doro wat, shiro, tibs and more from the kitchens you love.
           </p>
           <div className="hero-actions">
-            <Link className="btn btn-light" to="/menu">
-              View the menu
+            <Link className="btn" to="/menu">
+              Order now
+            </Link>
+            <Link className="btn btn-light" to="/cart">
+              View cart
             </Link>
           </div>
         </div>
       </section>
-      <section className="highlights">
-        <article className="highlight">
-          <h3>Kitchen classics</h3>
-          <p>Doro wot, shiro, and injera made the way you remember them.</p>
-        </article>
-        <article className="highlight">
-          <h3>Fast city delivery</h3>
-          <p>From Bole to Gullele, checkout in a few taps.</p>
-        </article>
-        <article className="highlight">
-          <h3>Order with care</h3>
-          <p>See spicy dishes clearly, then add them to your cart.</p>
-        </article>
+      <section className="specials">
+        <div className="section-head">
+          <h3>Today's specials</h3>
+          <Link to="/menu">See full menu</Link>
+        </div>
+        {loading ? (
+          <p className="status" role="status">
+            Loading menu...
+          </p>
+        ) : null}
+        {error ? (
+          <p className="status status--error" role="alert">
+            {error}
+          </p>
+        ) : null}
+        {!loading && !error ? (
+          <div className="specials-grid">
+            {specials.map((dish) => (
+              <article className="special-card" key={dish.id}>
+                <Link to={`/menu/${dish.id}`}>
+                  <img src={dish.image} alt="" />
+                </Link>
+                <div className="special-body">
+                  <div className="special-top">
+                    <h3>
+                      <Link to={`/menu/${dish.id}`}>{dish.name}</Link>
+                    </h3>
+                    <span className="badge">{dish.category}</span>
+                  </div>
+                  <p className="price">
+                    {dish.price} <span>ETB</span>
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
+        ) : null}
       </section>
     </div>
   );

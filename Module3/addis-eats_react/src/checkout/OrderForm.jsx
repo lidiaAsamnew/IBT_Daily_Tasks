@@ -29,7 +29,7 @@ function OrderForm() {
       <h2>Customer Information</h2>
       <form onSubmit={handleSubmit}>
         <div className="field">
-          <label htmlFor="order-name">Name: </label>
+          <label htmlFor="order-name">Name</label>
           <input
             id="order-name"
             name="name"
@@ -40,7 +40,7 @@ function OrderForm() {
           />
         </div>
         <div className="field">
-          <label htmlFor="order-phone">Phone: </label>
+          <label htmlFor="order-phone">Phone</label>
           <input
             id="order-phone"
             name="phone"
@@ -51,7 +51,7 @@ function OrderForm() {
           />
         </div>
         <div className="field">
-          <label htmlFor="order-area">Area: </label>
+          <label htmlFor="order-area">Area</label>
           <select
             id="order-area"
             name="area"

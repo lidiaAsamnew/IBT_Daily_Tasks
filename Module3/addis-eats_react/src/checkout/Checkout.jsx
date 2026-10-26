@@ -117,66 +117,57 @@ function Checkout() {
     <div className="page">
       <h2>Checkout</h2>
       <div className="checkout-grid">
-        <div className="panel">
-          <h3>Order summary</h3>
-          <ul className="cart-list">
-            {items.map((item) => (
-              <li className="cart-line" key={item.id}>
-                {item.name} x {item.quantity} — {item.price * item.quantity} ETB
-              </li>
-            ))}
-          </ul>
-          <p>
-            Total : <strong>{total} ETB</strong>
-          </p>
-        </div>
-
         <div className="form-card">
           <h3>Delivery details</h3>
           <form onSubmit={handleSubmit} noValidate>
-            <div className="field">
-              <label htmlFor="name">Name: </label>
-              <input
-                id="name"
-                name="name"
-                type="text"
-                value={form.name}
-                onChange={handleChange}
-                placeholder="Your name"
-                autoComplete="name"
-                aria-invalid={Boolean(errors.name)}
-                aria-describedby={errors.name ? "name-error" : undefined}
-              />
+            <div className="form-row">
+              <div>
+                <div className="field">
+                  <label htmlFor="name">Full name</label>
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    value={form.name}
+                    onChange={handleChange}
+                    placeholder="Your name"
+                    autoComplete="name"
+                    aria-invalid={Boolean(errors.name)}
+                    aria-describedby={errors.name ? "name-error" : undefined}
+                  />
+                </div>
+                {errors.name && (
+                  <p id="name-error" className="error-text" role="alert">
+                    {errors.name}
+                  </p>
+                )}
+              </div>
+              <div>
+                <div className="field">
+                  <label htmlFor="phone">Phone number</label>
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    inputMode="numeric"
+                    value={form.phone}
+                    onChange={handleChange}
+                    placeholder="10-digit phone number"
+                    autoComplete="tel"
+                    aria-invalid={Boolean(errors.phone)}
+                    aria-describedby={errors.phone ? "phone-error" : undefined}
+                  />
+                </div>
+                {errors.phone && (
+                  <p id="phone-error" className="error-text" role="alert">
+                    {errors.phone}
+                  </p>
+                )}
+              </div>
             </div>
-            {errors.name && (
-              <p id="name-error" className="error-text" role="alert">
-                {errors.name}
-              </p>
-            )}
 
             <div className="field">
-              <label htmlFor="phone">Phone: </label>
-              <input
-                id="phone"
-                name="phone"
-                type="tel"
-                inputMode="numeric"
-                value={form.phone}
-                onChange={handleChange}
-                placeholder="10-digit phone number"
-                autoComplete="tel"
-                aria-invalid={Boolean(errors.phone)}
-                aria-describedby={errors.phone ? "phone-error" : undefined}
-              />
-            </div>
-            {errors.phone && (
-              <p id="phone-error" className="error-text" role="alert">
-                {errors.phone}
-              </p>
-            )}
-
-            <div className="field">
-              <label htmlFor="area">Delivery area: </label>
+              <label htmlFor="area">Delivery area</label>
               <select
                 id="area"
                 name="area"
@@ -200,7 +191,7 @@ function Checkout() {
             )}
 
             <div className="field">
-              <label htmlFor="address">Delivery address: </label>
+              <label htmlFor="address">Delivery address</label>
               <input
                 id="address"
                 name="address"
@@ -219,8 +210,46 @@ function Checkout() {
               </p>
             )}
 
-            <button type="submit">Place order</button>
+            <div className="field">
+              <label htmlFor="notes">Delivery notes (optional)</label>
+              <textarea
+                id="notes"
+                name="notes"
+                rows="2"
+                placeholder="Ring the bell twice"
+              />
+            </div>
+
+            <button type="submit" className="btn checkout-submit">
+              Place order
+            </button>
           </form>
+        </div>
+
+        <div className="panel">
+          <h3>Your order</h3>
+          <div className="checkout-items">
+            {items.map((item) => (
+              <div className="checkout-item" key={item.id}>
+                {item.image ? (
+                  <img className="thumb" src={item.image} alt="" />
+                ) : (
+                  <div className="thumb thumb-fallback" aria-hidden="true">
+                    ○
+                  </div>
+                )}
+                <div>
+                  <strong>{item.name}</strong>
+                  <p>Qty {item.quantity}</p>
+                </div>
+                <span>{item.price * item.quantity} ETB</span>
+              </div>
+            ))}
+          </div>
+          <p className="summary-total">
+            <span>Total</span>
+            <strong>{total} ETB</strong>
+          </p>
         </div>
       </div>
       <p className="page-links">

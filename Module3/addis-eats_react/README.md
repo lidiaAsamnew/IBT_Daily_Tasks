@@ -36,3 +36,7 @@ npm run dev
 - `/signin` — Sign in
 - `/checkout` — Checkout (requires sign in)
 - unknown paths — Not Found
+
+## Design
+
+The UI uses a single stylesheet (`src/css/style.css`) built on CSS custom properties (colors, radii, shadows, fonts). Dish illustrations are inline SVG (`src/ui/DishArt.jsx`); icons live in `src/ui/Icons.jsx`.

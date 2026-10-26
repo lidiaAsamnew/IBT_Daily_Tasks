@@ -2,7 +2,14 @@ import { Link } from "react-router-dom";
 import { useCart } from "./cart-context";
 
 function Cart() {
-  const { items, total, removeItem, clearCart } = useCart();
+  const { items, total, removeItem, clearCart, addItem } = useCart();
+
+  function setQuantity(item, quantity) {
+    removeItem(item.id);
+    for (let i = 0; i < quantity; i++) {
+      addItem(item);
+    }
+  }
 
   if (items.length === 0) {
     return (
@@ -22,31 +29,72 @@ function Cart() {
   return (
     <div className="page">
       <h2>Your cart</h2>
-      <ul className="cart-list">
-        {items.map((item) => (
-          <li className="cart-line" key={item.id}>
-            <span>
-              {item.name} x {item.quantity} — {item.price * item.quantity} ETB
-            </span>
-            <button
-              type="button"
-              onClick={() => removeItem(item.id)}
-              aria-label={`Remove ${item.name} from cart`}
-            >
-              Remove
+      <div className="cart-layout">
+        <ul className="cart-list">
+          {items.map((item) => (
+            <li className="cart-line" key={item.id}>
+              {item.image ? (
+                <img className="thumb" src={item.image} alt="" />
+              ) : (
+                <div className="thumb thumb-fallback" aria-hidden="true">
+                  ○
+                </div>
+              )}
+              <div className="cart-info">
+                <h3>{item.name}</h3>
+                <p>
+                  {item.price} ETB
+                </p>
+              </div>
+              <div className="stepper">
+                <button
+                  type="button"
+                  className="stepper-btn"
+                  onClick={() => setQuantity(item, item.quantity - 1)}
+                  aria-label={`Decrease ${item.name}`}
+                >
+                  −
+                </button>
+                <span className="stepper-count">{item.quantity}</span>
+                <button
+                  type="button"
+                  className="stepper-btn"
+                  onClick={() => addItem(item)}
+                  aria-label={`Increase ${item.name}`}
+                >
+                  +
+                </button>
+              </div>
+              <button
+                type="button"
+                className="remove-link"
+                onClick={() => removeItem(item.id)}
+                aria-label={`Remove ${item.name} from cart`}
+              >
+                Remove
+              </button>
+            </li>
+          ))}
+        </ul>
+        <aside className="panel">
+          <h3>Order summary</h3>
+          <div className="summary-total">
+            <span>Total</span>
+            <strong>{total} ETB</strong>
+          </div>
+          <Link className="btn order-checkout" to="/checkout">
+            Go to checkout
+          </Link>
+          <p className="cart-actions">
+            <button type="button" className="remove-link" onClick={clearCart}>
+              Clear cart
             </button>
-          </li>
-        ))}
-      </ul>
-      <h3>Total : {total} ETB</h3>
-      <p className="cart-actions">
-        <button type="button" onClick={clearCart}>
-          Clear cart
-        </button>
-        <Link className="btn btn-secondary" to="/menu">
-          Browse the menu
-        </Link>
-      </p>
+            <Link className="btn-secondary" to="/menu">
+              Browse the menu
+            </Link>
+          </p>
+        </aside>
+      </div>
     </div>
   );
 }

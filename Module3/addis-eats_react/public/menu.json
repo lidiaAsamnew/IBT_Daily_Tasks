@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Doro Wat",
+    "category": "Main",
+    "price": 240,
+    "spicy": true,
+    "special": true,
+    "image": "/assets/doro-wat.jpg",
+    "description": "Traditional Ethiopian chicken stew with berbere and spices."
+  },
+  {
+    "id": 2,
+    "name": "Shiro",
+    "category": "Vegetarian",
+    "price": 120,
+    "spicy": false,
+    "special": true,
+    "image": "/assets/shiro.jpg",
+    "description": "Smooth chickpea stew prepared with Ethiopian spices."
+  },
+  {
+    "id": 3,
+    "name": "Special Tibs",
+    "category": "Main",
+    "price": 320,
+    "spicy": true,
+    "special": true,
+    "image": "/assets/tibs.jpg",
+    "description": "Tender beef pieces cooked with onions, peppers and spices."
+  },
+  {
+    "id": 4,
+    "name": "Firfir",
+    "category": "Breakfast",
+    "price": 140,
+    "spicy": true,
+    "special": false,
+    "image": "/assets/firfir.jpg",
+    "description": "Pieces of injera mixed with berbere sauce and Ethiopian spices."
+  },
+  {
+    "id": 5,
+    "name": "Beyaynetu",
+    "category": "Vegetarian",
+    "price": 220,
+    "spicy": true,
+    "special": false,
+    "image": "/assets/beyaynetu.jpg",
+    "description": "A colorful combination of Ethiopian vegetarian dishes served on injera."
+  },
+  {
+    "id": 6,
+    "name": "Pancake",
+    "category": "Breakfast",
+    "price": 180,
+    "spicy": false,
+    "special": false,
+    "image": "/assets/pancake.jpg",
+    "description": "Fluffy pancakes served with syrup and fresh berries."
+  },
+  {
+    "id": 7,
+    "name": "Chips",
+    "category": "Snack",
+    "price": 60,
+    "spicy": false,
+    "special": false,
+    "image": "/assets/chips.jpg",
+    "description": "Crispy oven-baked chips served with homemade ketchup."
+  },
+  {
+    "id": 8,
+    "name": "Fresh Juice",
+    "category": "Drinks",
+    "price": 50,
+    "spicy": false,
+    "special": false,
+    "image": "/assets/juice.jpg",
+    "description": "Freshly squeezed fruit juice, served cold."
+  }
+]

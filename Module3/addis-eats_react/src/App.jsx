@@ -7,7 +7,6 @@ import DishDetail from "./menu/DishDetail";
 import Cart from "./cart/Cart";
 import { CartProvider } from "./cart/CartProvider";
 import { AuthProvider } from "./auth/AuthProvider";
-import RequireAuth from "./auth/RequireAuth";
 import SignIn from "./auth/SignIn";
 import NotFound from "./ui/NotFound";
 import ErrorBoundary from "./ui/ErrorBoundary";
@@ -35,9 +34,7 @@ function App() {
                   <Route path="menu/:id" element={<DishDetail />} />
                   <Route path="cart" element={<Cart />} />
                   <Route path="signin" element={<SignIn />} />
-                  <Route element={<RequireAuth />}>
-                    <Route path="checkout" element={<Checkout />} />
-                  </Route>
+                  <Route path="checkout" element={<Checkout />} />
                   <Route path="*" element={<NotFound />} />
                 </Route>
               </Routes>

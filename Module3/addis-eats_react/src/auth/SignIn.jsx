@@ -33,7 +33,7 @@ function SignIn() {
       <p className="lede">Sign in to continue to checkout.</p>
       <form onSubmit={handleSubmit}>
         <div className="field">
-          <label htmlFor="signin-name">Name: </label>
+          <label htmlFor="signin-name">Name</label>
           <input
             id="signin-name"
             type="text"
