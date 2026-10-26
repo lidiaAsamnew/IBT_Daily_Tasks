@@ -1,0 +1,33 @@
+{
+  "name": "addis-eats",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "test": "node --test \"tests/*.test.js\""
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.0",
+    "leaflet": "^1.9.4",
+    "next": "^15.5.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-is": "^19.0.0",
+    "react-leaflet": "^5.0.0",
+    "recharts": "^2.15.0",
+    "swr": "^2.3.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.0.0",
+    "@eslint/js": "^9.0.0",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "^15.5.0",
+    "globals": "^15.0.0"
+  }
+}

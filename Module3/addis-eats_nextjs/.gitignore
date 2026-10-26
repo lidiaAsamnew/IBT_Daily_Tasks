@@ -1,0 +1,19 @@
+# dependencies
+node_modules
+
+# next.js
+.next
+out
+
+# local environment — never commit secrets (Day 43)
+.env*.local
+.env.local
+
+# local development data (file-backed store)
+.data
+
+# misc
+.DS_Store
+*.log
+npm-debug.log*
+.vercel
