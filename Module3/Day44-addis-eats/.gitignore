@@ -1,0 +1,10 @@
+node_modules
+.next
+out
+build
+.DS_Store
+*.log
+
+# Day 43: real secrets live in .env*.local (yours alone) and in the hosting platform's settings.
+# .env, .env.development and .env.production are shared, committed defaults - nothing secret in them.
+.env*.local
